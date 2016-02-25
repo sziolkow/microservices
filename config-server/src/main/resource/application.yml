@@ -6,4 +6,4 @@ spring:
       config:
          server:
             git :
-               uri: C:\dev\projects\github-sziolkow\microservices-config
+               uri: https://github.com/sziolkow/microservices-config
