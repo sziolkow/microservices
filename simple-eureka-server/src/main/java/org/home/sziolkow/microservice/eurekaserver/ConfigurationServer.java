@@ -1,15 +1,15 @@
-package org.home.sziolkow.microservice.server;
+package org.home.sziolkow.microservice.eurekaserver;
 
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-@EnableConfigServer
+@EnableEurekaServer
 public class ConfigurationServer {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConfigurationServer.class, args);
+        new SpringApplicationBuilder(ConfigurationServer.class).web(true).run(args);
     }
 }
